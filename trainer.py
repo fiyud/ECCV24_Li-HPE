@@ -1,23 +1,16 @@
-
 import yaml
-import tensorflow as tf
 import numpy as np
 import torch
 import os
-# Please add the downloaded mmfi directory into your python project. 
-from mmfi1 import make_dataset, make_dataloader, MMFi_Dataset, decode_config, MMFi_Database
+
+from mmfi import make_dataset, make_dataloader, MMFi_Dataset, decode_config, MMFi_Database
 import torch.nn as nn
 from evaluation import compute_pck_pckh
 from sklearn.model_selection import train_test_split
 from evaluate import compute_similarity_transform, calulate_error
 from network_twostream import posenet, weights_init
-#from ConViT_network import posenet, weights_init
-#from Dynam_Residual_network import posenet, weights_init
-#from WiLDAR_network import posenet, weights_init
-from minirocket_3variables import fit, transform
-from minirocket import features
+
 from sklearn.metrics.pairwise import cosine_similarity
-from feature_multiRocket import features_multi_rocket
 from features_hydra import features_hydra
 from sklearn.feature_selection import VarianceThreshold
 import thop 
