@@ -4,8 +4,8 @@ import tensorflow as tf
 import numpy as np
 import torch
 import os
-# Please add the downloaded mmfi directory into your python project. 
-from mmfi1 import make_dataset, make_dataloader, MMFi_Dataset, decode_config, MMFi_Database
+
+from mmfi_lib import make_dataset, make_dataloader, MMFi_Dataset, decode_config, MMFi_Database
 import torch.nn as nn
 from evaluation import compute_pck_pckh
 from sklearn.model_selection import train_test_split
